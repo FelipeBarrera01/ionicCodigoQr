@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>
+      Historial
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="enviarCorreo()" color="primary">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+        Click me
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   
+  <ion-list>
+      <ion-item *ngFor="let resitro of dataLocal.guardados" (click)="abrirRegistro(resitro)">
+    <ion-icon slot="start" [name]="resitro.icon"></ion-icon>
+  
+      <ion-label>
+        <h2>{{resitro.text}}</h2>
+        <p>{{resitro.created | date: 'medium'}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
