@@ -12,7 +12,7 @@ export class Tab2Page {
 
   }
   enviarCorreo(){
-
+    this.dataLocal.enviarCorreo();
   }
   abrirRegistro(registro){
     this.dataLocal.abrirRegistro(registro);
